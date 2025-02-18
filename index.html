@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Imaging Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero-container {
+      display: grid;
+      grid-template-columns: 26% 5% 6% 16% 12% 35%;
+      grid-template-rows: 33% 16% 15% 36%;
+      width: 1000px;
+      height: 500px;
+      margin: auto;
+    }
+    .hero-item {
+      margin: 4px !important;
+      background-color: #f4f3ef;
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 1.05rem;
+      font-weight: 500;
+      border-radius: 8px;
+    }
+    .hero-center {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: radial-gradient(ellipse at top left, #e49d5d 25%, transparent 70%),
+                  radial-gradient(ellipse at top right, #d85654 25%, transparent 70%),
+                  radial-gradient(ellipse at bottom left, #dfb696 25%, transparent 50%),
+                  radial-gradient(ellipse at bottom right, #3d5e8b 25%, transparent 700%);
+      color: white;
+    }
+    .hero-problems {
+      font-weight: 700;
+      background: linear-gradient(180deg, #e49d5d, #d85654, #3d5e8b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-highlight {
+      background-color: #dfb696;
+      margin-right: 2px;
+      padding: 2px 4px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">AI Imaging Lab</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="people.html">People</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <section>
+    <div>
+      <div class="hero-container">
+        <div class="hero-item" style="grid-column: span 3; background: url('media/google-io.jpg') center/cover no-repeat;"></div>
+        <div class="hero-item" style="grid-column: span 2; background: url('media/diff.jpg') center/cover no-repeat;"></div>
+        <div class="hero-item" style="grid-row: span 2; background: url('media/3d-vision.jpg') center/cover no-repeat;"></div>
+        <div class="hero-item" style="grid-row: span 2; background: url('media/pixel9.jpg') center/cover no-repeat;"></div>
+        <div class="hero-item hero-center" style="grid-column: span 4;  grid-row: span 2;">COMPUTATIONAL</br>IMAGING & VIDEO</div>
+        <div class="hero-item"><span class="hero-highlight">ON-DEVICE</span>MACHINE LEARNING</div>
+        <div class="hero-item" style="grid-column: span 2; background: url('media/3d-object.jpg') center/cover no-repeat;"></div>
+        <div class="hero-item" style="grid-column: span 2;"><div class="hero-problems">SUPER-RES<br>DENOISE<br>LOW-LIGHT<br>RESTORATION<br>DEBLUR<br>UNCOMPRESS</div></div>
+        <div class="hero-item" style="grid-column: span 2; background: url('media/feature.jpg') center/cover no-repeat;"></div>
+      </div>
+      <p>We study fundamental methods in computational imaging, computer vision, and machine learning. Our research aims to advance the way we capture, analyze, and reconstruct the world around us, bridging theoretical advances and practical applications across a wide range of fields, from computational photography to creative AI.</p>
+    </div>
+  </section>
+  <section>
+    <div>
+      <h2>News</h2>
+      <p><i>Posted on Feb 16 2025</i></p>
+      <p>Our lab has officially launched at Korea University! We are excited to build a dynamic research environment and collaborate with scholars and industry partners worldwide. Stay tuned for upcoming projects and publications.</p>
+    </div>
+  </section>
+  <footer>
+    <p>Copyright 2025. All rights reserved.</p>
+  </footer>
+</body>
+</html>
