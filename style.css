@@ -18,6 +18,7 @@ body {
   color: var(--text-dark);
 }
 a {
+  color: var(--text-dark);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -95,7 +96,6 @@ iframe {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.85rem;
   width: 240px;
 }
 .people-container > h4 {
@@ -108,45 +108,11 @@ iframe {
   font-weight: 400;
   margin: 0;
 }
+.people-container a {
+  margin: 0 2px;
+}
 footer {
   font-size: 0.8rem;
   text-align: center;
   color: var(--text-footer);
-}
-
-.people-links {
-  display: inline-flex;
-  gap: 12px;
-  align-items: center;
-  margin-top: 4px;
-}
-.people-links a {
-  font-size: 1.2rem;              
-  color: var(--text-dark);
-  transition: color 0.2s;
-}
-.people-links a:hover {
-  color: var(--text-hover);       
-}
-
-.people-interests {
-  margin-top: 6px;
-  width: 100%;
-}
-.people-interests .label {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--text-footer);
-  margin-bottom: 2px;
-}
-.interest-list {
-  margin: 0;
-  padding-left: 1.1rem;   
-  line-height: 1.55;
-  color: var(--text-dark);
-}
-.interest-list li {
-  margin: 2px 0;
 }
