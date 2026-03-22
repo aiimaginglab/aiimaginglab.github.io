@@ -20,9 +20,15 @@
     <a href="people.html">People</a>
     <a href="contact.html">Contact</a>
   </nav>
-  <section>
-    <h3>For Prospective Students</h3>
-    <p>We are looking for motivated graduate students and interns with a strong interest in computational imaging. To inquire about open positions and opportunities, please submit a CV and transcript to <a href="mailto:sungjoonc@korea.ac.kr">sungjoonc@korea.ac.kr</a>.</p>
+  <section class="flex-row">
+    <div class="flex-column">
+      <h3>For Prospective Students</h3>
+      <p>We are looking for motivated graduate students and interns with a strong interest in computational imaging. To inquire about open positions and opportunities, please submit a CV and transcript to <a href="mailto:sungjoonc@korea.ac.kr">sungjoonc@korea.ac.kr</a>.</p>
+    </div>
+    <img class="admissions-thumbnail" src="media/admissions-fall-2026.jpg" alt="Admissions" onclick="document.querySelector('.admissions-overlay').classList.add('active')">
+    <div class="admissions-overlay" onclick="this.classList.remove('active')">
+      <img src="media/admissions-fall-2026.jpg" alt="Admissions">
+    </div>
   </section>
   <section>
     <h3>Address</h3>
