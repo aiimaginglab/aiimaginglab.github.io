@@ -3,6 +3,7 @@
   --background: #ecf0f1;
   --text-light: #ffffff;
   --text-dark: #2c3e50;
+  --text-link: #327ea4;
   --text-hover: #38bdf8;
   --text-footer: #8d9eaf;
 }
@@ -18,7 +19,7 @@ body {
   color: var(--text-dark);
 }
 a {
-  color: var(--text-dark);
+  color: var(--text-link);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -87,9 +88,63 @@ section {
   flex-shrink: 0;
   display: block;
 }
-iframe {
+.publication {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.publication > * {
+  margin: 0;
+}
+.publication > h3 {
+  font-weight: 600;
+}
+.publication > h4 {
+  font-weight: 400;
+  font-style: italic;
+}
+.publication > h5 {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.publication a {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 4px 14px;
+  background-color: var(--background);
+  font-size: 0.8rem;
+  border-radius: 13px;
+  transition: all 0.1s ease;
+}
+.publication a:hover {
+  background-color: var(--primary-color);
+}
+.collapsible {
+  position: relative;
+  max-height: 16em;
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+}
+.collapsible.expanded {
+  max-height: 800px;
+}
+.collapse-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  border: 0;
+  height: 3em;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.95) 60%);
+  color: var(--text-footer);
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 8px;
+  cursor: pointer;
+}
+.collapsible.expanded .collapse-button {
+  background: transparent;
 }
 .people-img {
   width: 150px;
@@ -122,6 +177,10 @@ iframe {
 }
 .people a {
   margin: 0 2px;
+}
+iframe {
+  width: 100%;
+  border: 0;
 }
 footer {
   font-size: 0.8rem;

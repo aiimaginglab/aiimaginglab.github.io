@@ -20,10 +20,33 @@
     <a href="people.html">People</a>
     <a href="contact.html">Contact</a>
   </nav>
-  <section>
-    <h3>Prior to 2025</h3>
-    <iframe class="publications" src="scholar.html" height="1300px"></iframe>
+  <section class="collapsible">
+    <div class="flex-row">
+      <img class="research-img" src="media/publications/sdm.jpg" alt="SDM">
+      <div class="publication">
+        <h3>Formalizing the Sampling Design Space of Diffusion-Based Generative Models via Adaptive Solvers and Wasserstein-Bounded Timesteps</h3>
+        <h4>Sangwoo Jo, Sungjoon Choi</h4>
+        <h5>
+          Preprint
+          <a href="https://arxiv.org/pdf/2602.12624" target="_blank">Paper</a>
+          <a href="https://github.com/aiimaginglab/sdm" target="_blank">Code</a>
+        </h5>
+        <p>Diffusion-based generative models have achieved remarkable performance across various domains, yet their practical deployment is often limited by high sampling costs. While prior work focuses on training objectives or individual solvers, the holistic design of sampling, specifically solver selection and scheduling, remains dominated by static heuristics. In this work, we revisit this challenge through a geometric lens, proposing SDM, a principled framework that aligns the numerical solver with the intrinsic properties of the diffusion trajectory. By analyzing the ODE dynamics, we show that efficient low-order solvers suffice in early high-noise stages while higher-order solvers can be progressively deployed to handle the increasing non-linearity of later stages. Furthermore, we formalize the scheduling by introducing a Wasserstein-bounded optimization framework. This method systematically derives adaptive timesteps that explicitly bound the local discretization error, ensuring the sampling process remains faithful to the underlying continuous dynamics. Without requiring additional training or architectural modifications, SDM achieves state-of-the-art performance across standard benchmarks, including an FID of 1.93 on CIFAR-10, 2.41 on FFHQ, and 1.98 on AFHQv2, with a reduced number of function evaluations compared to existing samplers.</p>
+      </div>
+    </div>
   </section>
+  <section>
+    <h3>Prior to 2026</h3>
+    <p>For a complete list of publications, please visit <a href="https://scholar.google.com/citations?hl=en&user=1_PHYMEAAAAJ" target="_blank">Google Scholar</a>.</p>
+  </section>
+  <script>
+    document.querySelectorAll('.collapsible').forEach(function(section) {
+      section.insertAdjacentHTML(
+        'beforeend', 
+        '<div class="collapse-button" onclick="this.parentElement.classList.toggle(\'expanded\')">&mldr;</div>'
+      );
+    });    
+  </script>
   {% include footer.html %}
 </body>
 </html>
