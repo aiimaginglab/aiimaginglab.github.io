@@ -34,38 +34,37 @@ b {
   font-weight: 600;
 }
 nav {
-  display: grid;
-  grid-template-columns: repeat(5, max-content);
+  display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.9rem;
-  background: var(--primary-color);
+  gap: 64px;
   padding: 1rem 0;
+  background: var(--primary-color);
 }
 nav a {
-  justify-self: center;
   color: var(--text-light);
   text-transform: uppercase;
-  padding: 0.3rem 1rem;
-  margin: 0 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 nav a:first-child {
   text-transform: none;
-  font-weight: 600;
   font-size: 1.2rem;
+  font-weight: 600;
   background: linear-gradient(90deg, #818cf8, #e0e7ff, #38bdf8, #e879f9);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 @media (max-width: 768px) {
-  nav a:first-child {
-    grid-column: span 5;
+  nav {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    justify-content: space-evenly;
+    gap: 0.5rem 0;
   }
-}
-@media (max-width: 550px) {
-  nav a:not(:first-child) {
-    grid-column: span 2;
+  nav a:first-child {
+    grid-column: 1 / -1;
+    justify-self: center;
   }
 }
 hr {
@@ -150,9 +149,14 @@ section {
 }
 .collapsible {
   position: relative;
-  max-height: 16em;
+  max-height: 16rem;
   overflow: hidden;
   transition: max-height 0.2s ease;
+}
+@media (max-width: 768px) {
+  .collapsible {
+    max-height: 29rem;
+  }
 }
 .collapsible.expanded {
   max-height: none;
@@ -162,7 +166,7 @@ section {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 3em;
+  height: 3rem;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.95) 60%);
   color: var(--text-footer);
   font-weight: 600;
@@ -180,18 +184,18 @@ section {
   height: 150px;
   border-radius: 50%;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
+} 
 .people-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  justify-content: space-evenly;
+  gap: 2rem 1rem;
 }
 .people {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  width: 238px;
 }
 .people > * {
   margin: 0;
