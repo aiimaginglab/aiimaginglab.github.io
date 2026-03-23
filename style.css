@@ -158,9 +158,6 @@ section {
     max-height: 29rem;
   }
 }
-.collapsible.expanded {
-  max-height: none;
-}
 .collapse-button {
   position: absolute;
   bottom: 0;

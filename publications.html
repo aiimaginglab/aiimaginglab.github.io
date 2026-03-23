@@ -41,10 +41,17 @@
   </section>
   <script>
     document.querySelectorAll('.collapsible').forEach(function(section) {
-      section.insertAdjacentHTML(
-        'beforeend', 
-        '<div class="collapse-button" onclick="this.parentElement.classList.toggle(\'expanded\')">&mldr;</div>'
-      );
+      section.insertAdjacentHTML('beforeend', '<div class="collapse-button">&mldr;</div>');
+      section.querySelector('.collapse-button').addEventListener('click', function(e) {
+        e.stopPropagation(); 
+        if (section.classList.contains('expanded')) {
+          section.classList.remove('expanded');
+          section.style.maxHeight = null;
+        } else {
+          section.classList.add('expanded');
+          section.style.maxHeight = section.scrollHeight + "px"; 
+        }
+      });
     });    
   </script>
   {% include footer.html %}
